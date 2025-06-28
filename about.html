@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTJ3T0VH5Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZTJ3T0VH5Z');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn.glitch.global/eab46080-9c8c-4483-aed4-8508e069f9ae/icon.png?v=1744489452062" />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  <meta property="og:title" content="Start Your Mastery eBook" />
+  <meta property="og:description" content="Start Your Mastery eBook" />
+  <meta property="og:image" content="https://cdn.glitch.global/eab46080-9c8c-4483-aed4-8508e069f9ae/pfgasda.png?v=1744488761281" />
+  <meta property="og:url" content="https://masterymode.glitch.me/" />
+  
+  <title>Mastery Mode - Start Your Mastery eBook</title>
+  <head>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif; /* Updated font-family to match link */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; /* Align items from the top */
+      min-height: 100vh;
+      padding: 40px 20px; /* Add more top padding */
+      text-align: center;
+    }
+
+   img.logo {
+  width: 100%;
+  max-width: 130px; /* Adjust as needed */
+  height: auto;
+  display: block;
+  margin: 20px auto 40px auto; /* More bottom margin for logo */
+}
+
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* Subtle zoom */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+    .book-wrapper {
+      position: relative; /* For positioning the glow effect */
+      margin-bottom: 30px;
+    }
+
+    img.book {
+      max-width: 180px;
+      width: 100%;
+      display: block; /* Remove inline spacing */
+      animation: slowZoom 5s ease-in-out infinite;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Subtle shadow */
+      border-radius: 4px; /* Soften edges */
+    }
+    
+    .image-promo {
+  width: 100%; /* Make it fill the width of its parent */
+  max-width: 500px; /* Set a maximum width to prevent it from becoming too large on wide screens */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below the image */
+  margin: 20px auto; /* Add vertical spacing and center it horizontally */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Optional: Add a subtle shadow */
+  border-radius: 8px; /* Optional: Soften the corners */
+}
+
+    .book-glow {
+      position: absolute;
+      top: -50px;
+      left: -80px;
+      right: -80px;
+      bottom: -50px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 10%, transparent 70%); /* Soft blue glow */
+      filter: blur(15px);
+      z-index: -1;
+      opacity: 0.5;
+    }
+    
+    h1 {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    h1 {
+      font-size: 28px; /* Slightly larger headline */
+      margin-bottom: 5px;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 18px; /* More descriptive sub-headline size */
+      margin-top: 25px;
+      margin-bottom: 15px;
+      letter-spacing: 0px;
+      font-weight: 600; /* Semi-bold for emphasis */
+    }
+
+    h3 {
+      font-size: 20px; /* Stronger call to action heading */
+      margin-top: 5px;
+      margin-bottom: 20px;
+      letter-spacing: -0.3px;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto 30px auto;
+      max-width: 420px; /* Slightly wider list */
+      text-align: left;
+    }
+
+    li {
+      margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 1.6;
+      position: relative; /* For custom bullet */
+      padding-left: 2.4em; /* Space for custom bullet */
+    }
+
+    li::before {
+      content: "✅"; /* Checkmark for positive reinforcement */
+      color: #00bfff; /* Glowing blue color */
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 2px; /* Adjust vertical alignment */
+    }
+
+    .newsletter {
+      width: 100%;
+      max-width: 400px; /* Narrower form for better focus */
+      margin-bottom: 40px;
+    }
+
+    /* Styling for Beehiiv Embed */
+    .beehiiv-embed-button {
+      background-color: #00bfff !important; /* Glowing button color */
+      color: #000 !important; /* Dark text on button */
+      font-weight: bold !important;
+      padding: 12px 25px !important;
+      border-radius: 6px !important;
+      border: none !important;
+      cursor: pointer !important;
+      font-size: 16px !important;
+      letter-spacing: 0.5px !important;
+      transition: background-color 0.3s ease !important;
+      box-shadow: 0 2px 8px rgba(0, 153, 255, 0.4) !important;
+    }
+
+    .beehiiv-embed-button:hover {
+      background-color: #33ccff !important;
+      box-shadow: 0 4px 12px rgba(0, 153, 255, 0.6) !important;
+    }
+
+    .beehiiv-embed-input {
+      padding: 12px !important;
+      border-radius: 6px !important;
+      border: 1px solid #444 !important;
+      margin-bottom: 15px !important;
+      font-size: 15px !important;
+      color: #fff !important;
+      background-color: #111 !important;
+    }
+
+    p {
+      font-size: 15px;
+      max-width: 450px; /* Slightly wider paragraph */
+      margin-bottom: 10px;
+      text-align: center;
+      line-height: 1.6;
+      color: #ddd; /* Slightly softer white */
+      padding: 0 20px;
+    }
+
+    p.copyright {
+      font-size: 12px;
+      color: #666;
+      margin-top: 30px;
+    }
+
+    #tsparticles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+    
+button {
+      margin-top: 1rem; /*  */
+      padding: 0.8rem 1rem; /*  */
+      background-color: #fff; /*  */
+      color: #000; /*  */
+      font-weight: bold; /*  */
+      border: none; /*  */
+      border-radius: 5px; /*  */
+      cursor: pointer; /*  */
+      width: 30%; /* Add this line to make the button fill the width of its parent */
+      box-sizing: border-box; /* Add this line to include padding and border in the element's total width and height */
+}
+    
+    function scrollToBottom() {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth' // This makes the scroll animated and smooth
+    });
+  }
+    
+    
+  .product {
+        background-color: #111;
+        border: 1px solid #444;
+        padding: 1rem;
+        border-radius: 10px;
+  }
+    
+  .parent-container {
+    display: flex;
+    gap: 20px; /* Adjust this value for your desired margin */
+}
+    
+    .about-us-content {
+        display: flex; /* Makes this div a flex container */
+        align-items: center; /* Vertically centers the icon and the h2 text */
+        justify-content: center; /* Horizontally centers the icon and text block within its parent (.product) */
+        gap: 10px; /* Adds space between the icon and the h2 */
+        width: 100%; /* Ensures it takes full width within the product card */
+        cursor: pointer;
+        /* Remove any default h2 margin-top if it's causing issues, as flex gap handles spacing */
+}
+    
+    .about-us-icon {
+        font-size: 1.5rem; /* Adjust icon size to match or slightly larger than h2 font-size */
+        color: white; /* Ensures the icon is white */
+      }
+
+      /* You might need to adjust the h2 margin if it interferes with flexbox */
+      .about-us-content h2 {
+        margin: 0; /* Remove default h2 margin as flexbox will handle spacing */
+        font-size: 1.2rem; /* Ensure consistent font size as per your .product h2 */
+      }
+    
+  </style>
+</head>
+<body>
+  <h1>About us</h1>
+  
+  <br>
+  
+  <p> Mastery Mode is committed to self-mastery. We are building a community of high achievers while providing transformational resources to help individuals unlock their full potential. We are focused in a permanent shift into the realm of the extraordinary. We are dedicated to the rejection of mediocrity and the full embodiment of self-mastery.
+  </p>
+  <br>
+
+  <p style="opacity: 0.5;">
+    Mastery Mode © — All rights reserved.
+    <br><br>
+  </p>
+
+<div id="tsparticles"></div>
+  
+</body>
+</html>
