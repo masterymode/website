@@ -1,415 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTJ3T0VH5Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZTJ3T0VH5Z');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn.glitch.global/eab46080-9c8c-4483-aed4-8508e069f9ae/icon.png?v=1744489452062" />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  <meta property="og:title" content="Start Your Mastery eBook" />
+  <meta property="og:description" content="Start Your Mastery eBook" />
+  <meta property="og:image" content="https://cdn.glitch.global/eab46080-9c8c-4483-aed4-8508e069f9ae/pfgasda.png?v=1744488761281" />
+  <meta property="og:url" content="https://masterymode.glitch.me/" />
+  
+  <title>Mastery Mode - Start Your Mastery eBook</title>
   <head>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTJ3T0VH5Z"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif; /* Updated font-family to match link */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; /* Align items from the top */
+      min-height: 100vh;
+      padding: 40px 20px; /* Add more top padding */
+      text-align: center;
+    }
 
-      gtag('config', 'G-ZTJ3T0VH5Z');
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://cdn.glitch.global/eab46080-9c8c-4483-aed4-8508e069f9ae/icon.png?v=1744489452062" />
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      />
-    <meta property="og:title" content="Start Your Mastery eBook" />
-    <meta property="og:description" content="Start Your Mastery eBook" />
-    <meta property="og:image" content="https://cdn.glitch.global/eab46080-9c8c-4483-aed4-8508e069f9ae/pfgasda.png?v=1744488761281" />
-    <meta property="og:url" content="https://masterymode.glitch.me/" />
+   img.logo {
+  width: 100%;
+  max-width: 130px; /* Adjust as needed */
+  height: auto;
+  display: block;
+  margin: 20px auto 40px auto; /* More bottom margin for logo */
+}
 
-    <title>Mastery Mode - Start Your Mastery eBook</title>
-  </head>
-  <body>
-    <style>
-      body {
-        margin: 0;
-        background-color: #000;
-        color: #fff;
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        min-height: 100vh;
-        padding: 40px 20px;
-        text-align: center;
-      }
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* Subtle zoom */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-      img.logo {
-        width: 100%;
-        max-width: 130px;
-        height: auto;
-        display: block;
-        margin: 20px auto 40px auto;
-      }
+    .book-wrapper {
+      position: relative; /* For positioning the glow effect */
+      margin-bottom: 30px;
+    }
 
-      @keyframes slowZoom {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
+    img.book {
+      max-width: 180px;
+      width: 100%;
+      display: block; /* Remove inline spacing */
+      animation: slowZoom 5s ease-in-out infinite;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Subtle shadow */
+      border-radius: 4px; /* Soften edges */
+    }
+    
+    .image-promo {
+  width: 100%; /* Make it fill the width of its parent */
+  max-width: 500px; /* Set a maximum width to prevent it from becoming too large on wide screens */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below the image */
+  margin: 20px auto; /* Add vertical spacing and center it horizontally */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Optional: Add a subtle shadow */
+  border-radius: 8px; /* Optional: Soften the corners */
+}
 
-      @keyframes glowPulse {
-        0% {
-          transform: scale(1);
-          opacity: 0.5;
-        }
-        50% {
-          transform: scale(0.9); /* Decrease size by 10% */
-          opacity: 0.7; /* Slightly more opaque when smaller */
-        }
-        100% {
-          transform: scale(1);
-          opacity: 0.5;
-        }
-      }
+    .book-glow {
+      position: absolute;
+      top: -50px;
+      left: -80px;
+      right: -80px;
+      bottom: -50px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 10%, transparent 70%); /* Soft blue glow */
+      filter: blur(15px);
+      z-index: -1;
+      opacity: 0.5;
+    }
 
-      .book-wrapper {
-        position: relative;
-        margin-bottom: 30px;
-      }
+    h1 {
+      font-size: 28px; /* Slightly larger headline */
+      margin-bottom: 5px;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
 
-      img.book {
-        max-width: 180px;
-        width: 100%;
-        display: block;
-        animation: slowZoom 5s ease-in-out infinite;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-        border-radius: 4px;
-      }
+    h2 {
+      font-size: 18px; /* More descriptive sub-headline size */
+      margin-top: 25px;
+      margin-bottom: 15px;
+      letter-spacing: 0px;
+      font-weight: 600; /* Semi-bold for emphasis */
+    }
 
-      .image-promo {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-        display: block;
-        margin: 20px auto;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        border-radius: 8px;
-      }
+    h3 {
+      font-size: 20px; /* Stronger call to action heading */
+      margin-top: 5px;
+      margin-bottom: 20px;
+      letter-spacing: -0.3px;
+      font-weight: bold;
+    }
 
-      .book-glow {
-        position: absolute;
-        top: -50px;
-        left: -80px;
-        right: -80px;
-        bottom: -50px;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 10%, transparent 60%);
-        filter: blur(20px);
-        z-index: -1;
-        /* opacity: 0.5; <-- Initial opacity is now controlled by animation */
-        animation: glowPulse 4s ease-in-out infinite; /* Apply the new animation */
-      }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto 30px auto;
+      max-width: 420px; /* Slightly wider list */
+      text-align: left;
+    }
 
-      h1 {
-        font-size: 28px;
-        margin-bottom: 5px;
-        letter-spacing: -0.5px;
-        line-height: 1.2;
-      }
+    li {
+      margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 1.6;
+      position: relative; /* For custom bullet */
+      padding-left: 2.4em; /* Space for custom bullet */
+    }
 
-      h2 {
-        font-size: 18px;
-        margin-top: 25px;
-        margin-bottom: 15px;
-        letter-spacing: 0px;
-        font-weight: 600;
-      }
+    li::before {
+      content: "✅"; /* Checkmark for positive reinforcement */
+      color: #00bfff; /* Glowing blue color */
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 2px; /* Adjust vertical alignment */
+    }
 
-      h3 {
-        font-size: 20px;
-        margin-top: 5px;
-        margin-bottom: 20px;
-        letter-spacing: -0.3px;
-        font-weight: bold;
-      }
+    .newsletter {
+      width: 100%;
+      max-width: 400px; /* Narrower form for better focus */
+      margin-bottom: 40px;
+    }
 
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 20px auto 30px auto;
-        max-width: 420px;
-        text-align: left;
-      }
+    /* Styling for Beehiiv Embed */
+    .beehiiv-embed-button {
+      background-color: #00bfff !important; /* Glowing button color */
+      color: #000 !important; /* Dark text on button */
+      font-weight: bold !important;
+      padding: 12px 25px !important;
+      border-radius: 6px !important;
+      border: none !important;
+      cursor: pointer !important;
+      font-size: 16px !important;
+      letter-spacing: 0.5px !important;
+      transition: background-color 0.3s ease !important;
+      box-shadow: 0 2px 8px rgba(0, 153, 255, 0.4) !important;
+    }
 
-      li {
-        margin-bottom: 12px;
-        font-size: 15px;
-        line-height: 1.6;
-        position: relative;
-        padding-left: 2.4em;
-      }
+    .beehiiv-embed-button:hover {
+      background-color: #33ccff !important;
+      box-shadow: 0 4px 12px rgba(0, 153, 255, 0.6) !important;
+    }
 
-      li::before {
-        content: "✅";
-        color: #00bfff;
-        font-weight: bold;
-        position: absolute;
-        left: 0;
-        top: 2px;
-      }
+    .beehiiv-embed-input {
+      padding: 12px !important;
+      border-radius: 6px !important;
+      border: 1px solid #444 !important;
+      margin-bottom: 15px !important;
+      font-size: 15px !important;
+      color: #fff !important;
+      background-color: #111 !important;
+    }
 
-      .newsletter {
-        width: 100%;
-        max-width: 400px;
-        margin-bottom: 40px;
-      }
+    p {
+      font-size: 15px;
+      max-width: 450px; /* Slightly wider paragraph */
+      margin-bottom: 10px;
+      text-align: center;
+      line-height: 1.6;
+      color: #ddd; /* Slightly softer white */
+    }
 
-      /* Styling for Beehiiv Embed */
-      .beehiiv-embed-button {
-        background-color: #00bfff !important;
-        color: #000 !important;
-        font-weight: bold !important;
-        padding: 12px 25px !important;
-        border-radius: 6px !important;
-        border: none !important;
-        cursor: pointer !important;
-        font-size: 16px !important;
-        letter-spacing: 0.5px !important;
-        transition: background-color 0.3s ease !important;
-        box-shadow: 0 2px 8px rgba(0, 153, 255, 0.4) !important;
-      }
+    p.copyright {
+      font-size: 12px;
+      color: #666;
+      margin-top: 30px;
+    }
 
-      .beehiiv-embed-button:hover {
-        background-color: #33ccff !important;
-        box-shadow: 0 4px 12px rgba(0, 153, 255, 0.6) !important;
-      }
-
-      .beehiiv-embed-input {
-        padding: 12px !important;
-        border-radius: 6px !important;
-        border: 1px solid #444 !important;
-        margin-bottom: 15px !important;
-        font-size: 15px !important;
-        color: #fff !important;
-        background-color: #111 !important;
-      }
-
-      p {
-        font-size: 15px;
-        max-width: 450px;
-        margin-bottom: 10px;
-        text-align: center;
-        line-height: 1.6;
-        color: #ddd;
-      }
-
-      p.copyright {
-        font-size: 12px;
-        color: #666;
-        margin-top: 30px;
-      }
-
-      #tsparticles {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        pointer-events: none;
-      }
-
-      button {
-        margin-top: 1rem;
-        padding: 0.8rem 1rem;
-        background-color: #fff;
-        color: #000;
-        font-weight: bold;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1.1rem;
-        width: 40%;
-        box-sizing: border-box;
-      }
-
-      .product {
+    #tsparticles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+    
+button {
+      margin-top: 1rem; /*  */
+      padding: 0.8rem 1rem; /*  */
+      background-color: #fff; /*  */
+      color: #000; /*  */
+      font-weight: bold; /*  */
+      border: none; /*  */
+      border-radius: 5px; /*  */
+      cursor: pointer; /*  */
+      font-size: 1.1rem;
+      width: 40%; /* Add this line to make the button fill the width of its parent */
+      box-sizing: border-box; /* Add this line to include padding and border in the element's total width and height */
+}
+    
+    function scrollToBottom() {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth' // This makes the scroll animated and smooth
+    });
+  }
+    
+    
+  .product {
         background-color: #111;
         border: 1px solid #444;
         padding: 1rem;
         border-radius: 10px;
+  }
+    
+.parent-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center items when they wrap */
+  gap: 20px; /* Adjust this value for your desired margin */
+  padding: 0 10px; /* Add some horizontal padding to prevent items from touching the edges */
+  box-sizing: border-box; /* Include padding in the element's total width */
+  width: 100%; /* Ensure the container takes full width to allow for wrapping */
+}
+    
+    .about-us-content {
+        display: flex; /* Makes this div a flex container */
+        align-items: center; /* Vertically centers the icon and the h2 text */
+        justify-content: center; /* Horizontally centers the icon and text block within its parent (.product) */
+        gap: 10px; /* Adds space between the icon and the h2 */
+        width: 100%; /* Ensures it takes full width within the product card */
+        cursor: pointer;
+        /* Remove any default h2 margin-top if it's causing issues, as flex gap handles spacing */
+}
+    
+    .about-us-icon {
+        font-size: 1.5rem; /* Adjust icon size to match or slightly larger than h2 font-size */
+        color: white; /* Ensures the icon is white */
       }
 
-      .parent-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        padding: 0 10px;
-        box-sizing: border-box;
-        width: 100%;
+      /* You might need to adjust the h2 margin if it interferes with flexbox */
+      .about-us-content h2 {
+        margin: 0; /* Remove default h2 margin as flexbox will handle spacing */
+        font-size: 1.2rem; /* Ensure consistent font size as per your .product h2 */
       }
-
-      .about-us-content {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-          width: 100%;
-          cursor: pointer;
-      }
-
-      .about-us-icon {
-          font-size: 1.5rem;
-          color: white;
-        }
-
-        .about-us-content h2 {
-          margin: 0;
-          font-size: 1.2rem;
-        }
-
-    </style>
-    <div class="book-wrapper">
-      <img class="book" src="https://cdn.glitch.global/eab46080-9c8c-4483-aed4-8508e069f9ae/Agrupar%201.png?v=1744483780818" alt="Book Cover" />
-      <div class="book-glow"></div>
+    
+  </style>
+</head>
+<body>
+  <div class="book-wrapper">
+    <img class="book" src="https://cdn.glitch.global/eab46080-9c8c-4483-aed4-8508e069f9ae/Agrupar%201.png?v=1744483780818" alt="Book Cover" />
+    <div class="book-glow"></div>
+  </div>
+  
+  <h1>Your Free Starter Guide to Self-Mastery</h1>
+  
+  <br>
+  <div class="parent-container">
+    <div class="product">
+      <div class="about-us-content">
+        <i class="fa-solid fa-dollar-sign"></i>
+        <h2>FREE</h2>
+      </div>
+    </div>
+    
+    <div class="product">
+      <div class="about-us-content">
+        <i class="fa-solid fa-book"></i>
+        <h2>eBook</h2>
+      </div>
     </div>
 
-    <h1>Your Free Starter Guide to Self-Mastery</h1>
-
-    <br>
-    <div class="parent-container">
-      <div class="product">
-        <div class="about-us-content">
-          <i class="fa-solid fa-dollar-sign"></i>
-          <h2>FREE</h2>
+    <div class="product">
+      <div class="about-us-content">
+      <i class="fa-solid fa-headphones"></i>
+            <h2>Audiobook</h2>
         </div>
       </div>
+  </div>
+  <br>
+    
+  <p>
+    Are you tired of feeling controlled by life, lacking direction, or missing out on your true potential? This introductory guide will help you quickstart your journey to mastering your mind, body, wealth, relationships, and spirituality.
+  </p>
+  
+<button onclick="window.location.href='#page-bottom-target'">DOWNLOAD</button>
 
-      <div class="product">
-        <div class="about-us-content">
-          <i class="fa-solid fa-book"></i>
-          <h2>eBook</h2>
-        </div>
-      </div>
+  <img class="image-promo" src="https://res.cloudinary.com/doqaaii03/image/upload/v1751078351/Agrupar_49_gio7dr.png">
+  <h2>What You'll Discover Inside:</h2>
+  <ul>
+    <li><b>The Blueprint for a High-Quality Life:</b> Learn why self-mastery is the key to clear mind, peak physique, financial freedom, deep spirituality, and high-quality relationships.</li>
+    <li><b>Your First Steps to Transformation:</b> Understand what self-mastery truly is, why it's essential, and how to take immediate action to evolve your life.</li>
+    <li><b>The 5 Pillars + 3 Components:</b> Explore the fundamental areas of your existence and the crucial elements (Conviction, Clarity, Consistency) required to achieve them.</li>
+    <li><b>Actionable Insights:</b> Includes a self-awareness questionnaire and a 7-day challenge to help you implement what you learn.</li>
+  </ul>
 
-      <div class="product">
-        <div class="about-us-content">
-        <i class="fa-solid fa-headphones"></i>
-              <h2>Audiobook</h2>
-          </div>
-        </div>
-    </div>
-    <br>
+  <h3>Ready to stop drifting and start writing your own destiny?</h3>
+  <br>
 
-    <p>
-      Are you tired of feeling controlled by life, lacking direction, or missing out on your true potential? This introductory guide will help you quickstart your journey to mastering your mind, body, wealth, relationships, and spirituality.
-    </p>
+  <div class="newsletter">
+    <iframe
+      src="https://embeds.beehiiv.com/49023959-4e61-4fe7-93f7-f1a34ad63bbd"
+      data-test-id="beehiiv-embed"
+      width="100%"
+      height="200"
+      frameborder="0"
+      scrolling="no"
+      style="border-radius: 4px; border: 2px solid #e5e7eb; margin: 0; background-color: transparent;">
+    </iframe>
+  </div>
+  
+  <div id="page-bottom-target" style="height: 1px;"></div>
 
-    <button onclick="window.location.href='#page-bottom-target'">DOWNLOAD</button>
+  <p style="opacity: 0.5;">
+    Mastery Mode © — All rights reserved.
+    <br><br>
+  </p>
 
-    <img class="image-promo" src="https://res.cloudinary.com/doqaaii03/image/upload/v1751078351/Agrupar_49_gio7dr.png">
-    <h2>What You'll Discover Inside:</h2>
-    <ul>
-      <li><b>The Blueprint for a High-Quality Life:</b> Learn why self-mastery is the key to clear mind, peak physique, financial freedom, deep spirituality, and high-quality relationships.</li>
-      <li><b>Your First Steps to Transformation:</b> Understand what self-mastery truly is, why it's essential, and how to take immediate action to evolve your life.</li>
-      <li><b>The 5 Pillars + 3 Components:</b> Explore the fundamental areas of your existence and the crucial elements (Conviction, Clarity, Consistency) required to achieve them.</li>
-      <li><b>Actionable Insights:</b> Includes a self-awareness questionnaire and a 7-day challenge to help you implement what you learn.</li>
-    </ul>
+<div id="tsparticles"></div>
 
-    <h3>Ready to stop drifting and start writing your own destiny?</h3>
-    <br>
-
-    <div class="newsletter">
-      <iframe
-        src="https://embeds.beehiiv.com/49023959-4e61-4fe7-93f7-f1a344d63bbd"
-        data-test-id="beehiiv-embed"
-        width="100%"
-        height="200"
-        frameborder="0"
-        scrolling="no"
-        style="border-radius: 4px; border: 2px solid #e5e7eb; margin: 0; background-color: transparent;">
-      </iframe>
-    </div>
-
-    <div id="page-bottom-target" style="height: 1px;"></div>
-
-    <p style="opacity: 0.5;">
-      Mastery Mode © — All rights reserved.
-      <br><br>
-    </p>
-
-    <div id="tsparticles"></div>
-
-    <script>
-      function scrollToBottom() {
-        window.scrollTo({
-          top: document.documentElement.scrollHeight,
-          behavior: 'smooth'
-        });
-      }
-
-      window.addEventListener("DOMContentLoaded", () => {
-        tsParticles.load("tsparticles", {
-          background: {
-            color: { value: "transparent" }
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    tsParticles.load("tsparticles", {
+      background: {
+        color: { value: "transparent" }
+      },
+      particles: {
+        number: {
+          value: 40,
+          limit: 40,
+          density: {
+            enable: true,
+            area: 400
+          }
+        },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: {
+          value: 0.4,
+          random: true,
+          animation: {
+            enable: true,
+            speed: 0.4,
+            minimumValue: 0,
+            sync: false
+          }
+        },
+        size: {
+          value: { min: 1, max: 2 },
+          random: true
+        },
+        move: {
+          enable: true,
+          speed: 0.5,
+          direction: "none", // random direction
+          straight: false,
+          outModes: {
+            default: "out"
+          }
+        },
+        life: {
+          duration: {
+            sync: false,
+            value: {
+              min: 10,
+              max: 15
+            }
           },
-          particles: {
-            number: {
-              value: 40,
-              limit: 40,
-              density: {
-                enable: true,
-                area: 400
-              }
-            },
-            color: { value: "#ffffff" },
-            shape: { type: "circle" },
-            opacity: {
-              value: 0.4,
-              random: true,
-              animation: {
-                enable: true,
-                speed: 0.4,
-                minimumValue: 0,
-                sync: false
-              }
-            },
-            size: {
-              value: { min: 1, max: 2 },
-              random: true
-            },
-            move: {
-              enable: true,
-              speed: 0.5,
-              direction: "none",
-              straight: false,
-              outModes: {
-                default: "out"
-              }
-            },
-            life: {
-              duration: {
-                sync: false,
-                value: {
-                  min: 10,
-                  max: 15
-                }
-              },
-              count: 0,
-              delay: {
-                value: {
-                  min: 0,
-                  max: 1
-                }
-              }
+          count: 0, // Infinite looping
+          delay: {
+            value: {
+              min: 0,
+              max: 1
             }
           }
-        });
-      });
-    </script>
-  </body>
+        }
+      }
+    });
+  });
+</script>
+  
+</body>
 </html>
