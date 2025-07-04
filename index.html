@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE4NC1YTKP"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE4NC1YTKP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -105,14 +104,14 @@
       }
 
       .product button {
-        margin-top: 1rem; /*  */
-        padding: 0.8rem 1rem; /*  */
-        background-color: #fff; /*  */
-        color: #000; /*  */
-        font-weight: bold; /*  */
-        border: none; /*  */
-        border-radius: 5px; /*  */
-        cursor: pointer; /*  */
+        margin-top: 1rem; /* */
+        padding: 0.8rem 1rem; /* */
+        background-color: #fff; /* */
+        color: #000; /* */
+        font-weight: bold; /* */
+        border: none; /* */
+        border-radius: 5px; /* */
+        cursor: pointer; /* */
         width: 100%; /* Add this line to make the button fill the width of its parent */
         box-sizing: border-box; /* Add this line to include padding and border in the element's total width and height */
       }
@@ -234,7 +233,7 @@
             Get weekly in-depth insights with actionable steps to level up your
             life in all realms.
           </p>
-          <button onclick="openModal('product1')">SUBSCRIBE FOR FREE</button>
+          <button onclick="openModal('product1', 'Newsletter Subscription')">SUBSCRIBE FOR FREE</button>
         </div>
 
         <div class="product">
@@ -243,7 +242,7 @@
             Get daily self-mastery insights, engage directly with our community
             and download our exclusive wallpaper pack.
           </p>
-          <a href="https://t.me/masterymode" target="_blank">
+          <a href="https://t.me/masterymode" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Engagement', 'event_label': 'Telegram Join Button', 'value': 'Telegram'})">
             <button>JOIN FOR FREE</button>
           </a>
         </div>
@@ -258,11 +257,11 @@
             Learn the foundations of self-mastery and start your journey today
             with actionable steps. Available in eBook and AudioBook version.
           </p>
-          <button onclick="openModal('product3')">DOWNLOAD FOR FREE</button>
+          <button onclick="openModal('product3', 'Start Your Mastery Download')">DOWNLOAD FOR FREE</button>
         </div>
 
         <div class="product">
-          <div class="about-us-content" onclick="openModal('about')">
+          <div class="about-us-content" onclick="openModal('about', 'About Us')">
             <i class="fas fa-question-circle about-us-icon"></i>
             <h2>About us</h2>
           </div>
@@ -274,7 +273,6 @@
         </p>
       </div>
 
-      <!-- Modal -->
       <div id="modal" class="modal">
         <div class="modal-content">
           <button class="close-btn" onclick="closeModal()">
@@ -284,7 +282,6 @@
         </div>
       </div>
 
-      <!-- Hidden iframe content -->
       <div class="hidden-content">
         <div id="content-product1">
           <iframe
@@ -325,7 +322,19 @@
     </div>
 
     <script>
-      function openModal(productKey) {
+      // For general clicks on social media icons
+      document.querySelectorAll('.socials a').forEach(item => {
+        item.addEventListener('click', event => {
+          const socialPlatform = event.currentTarget.querySelector('i').classList[1].replace('fa-', '');
+          gtag('event', 'social_share', {
+            'method': socialPlatform,
+            'content_type': 'profile',
+            'item_id': 'Mastery Mode Profile'
+          });
+        });
+      });
+
+      function openModal(productKey, buttonName) {
         const modal = document.getElementById("modal");
         const modalBody = document.getElementById("modal-body");
         const content = document.getElementById("content-" + productKey);
@@ -334,6 +343,13 @@
           modalBody.innerHTML = content.innerHTML;
           modal.classList.add("active");
           document.body.style.overflow = "hidden";
+
+          // Track modal open as a custom event for click path/navigation flow
+          gtag('event', 'modal_open', {
+            'event_category': 'Engagement',
+            'event_label': `Opened ${buttonName} Modal`,
+            'product_key': productKey
+          });
         }
       }
 
@@ -342,7 +358,67 @@
         modal.classList.remove("active");
         document.getElementById("modal-body").innerHTML = "";
         document.body.style.overflow = "";
+
+        // Track modal close as a custom event for click path/navigation flow
+        gtag('event', 'modal_close', {
+          'event_category': 'Engagement',
+          'event_label': 'Closed Modal'
+        });
       }
+
+      // Scroll Depth Tracking
+      // This is a basic example; for more robust scroll tracking, consider a library or more advanced logic.
+      let scrollDepths = {
+        '25': false,
+        '50': false,
+        '75': false,
+        '100': false
+      };
+
+      window.addEventListener('scroll', () => {
+        const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+        if (scrollPercentage >= 25 && !scrollDepths['25']) {
+          gtag('event', 'scroll', {
+            'event_category': 'Engagement',
+            'event_label': 'Scrolled 25%',
+            'value': 25
+          });
+          scrollDepths['25'] = true;
+        }
+        if (scrollPercentage >= 50 && !scrollDepths['50']) {
+          gtag('event', 'scroll', {
+            'event_category': 'Engagement',
+            'event_label': 'Scrolled 50%',
+            'value': 50
+          });
+          scrollDepths['50'] = true;
+        }
+        if (scrollPercentage >= 75 && !scrollDepths['75']) {
+          gtag('event', 'scroll', {
+            'event_category': 'Engagement',
+            'event_label': 'Scrolled 75%',
+            'value': 75
+          });
+          scrollDepths['75'] = true;
+        }
+        if (scrollPercentage >= 100 && !scrollDepths['100']) {
+          gtag('event', 'scroll', {
+            'event_category': 'Engagement',
+            'event_label': 'Scrolled 100%',
+            'value': 100
+          });
+          scrollDepths['100'] = true;
+        }
+      });
+
+      // Traffic Source, Time on Page, Engagement Time, Device & Screen Size
+      // GA4's "Enhanced Measurement" automatically collects:
+      // - Traffic Source: Based on referrer information.
+      // - Time on Page & Engagement Time: Handled by 'page_view' events and engagement metrics like 'engaged sessions'.
+      // - Device & Screen Size: Automatically captured as user properties.
+      // No additional custom code is generally needed for these basic measurements beyond the initial gtag.js setup.
+      // You can find these metrics in your GA4 reports under sections like "User acquisition", "Engagement", and "Tech details".
     </script>
   </body>
 </html>
